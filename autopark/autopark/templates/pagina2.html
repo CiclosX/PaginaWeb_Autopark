@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .hero {
+            text-align: center;
+            padding: 20px;
+        }
+        .btn-app {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .card {
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">CICLOS</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Saber más</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contactanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container text-center mt-4">
+        <h1>AUTOPARK</h1>
+        <button class="btn-app">Descarga nuestra App</button>
+        <p>!!!Este sistema cuenta con características especiales las cuales hace a autopark una herramienta confiable y segura para ti¡¡¡</p>
+    </div>
+    
+    <div class="container d-flex justify-content-center flex-wrap mt-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'img/Captura de pantalla 2025-02-27 115244.png' %}" class="card-img-top" alt="Actualización en tiempo real">
+            <div class="card-body">
+                <h5 class="card-title">Actualización en tiempo real</h5>
+                <p class="card-text">Este sistema cuenta con actualizaciones en tiempo real de los espacios disponibles.</p>
+                <a href="#" class="btn btn-primary">Leer más</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'img/Captura de pantalla 2025-02-27 115222.png' %}" class="card-img-top" alt="Realizar una reserva">
+            <div class="card-body">
+                <h5 class="card-title">Realizar una reserva</h5>
+                <p class="card-text">Cuenta con el sistema de reserva de lugares mediante la App Móvil.</p>
+                <a href="#" class="btn btn-primary">Leer más</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'img/pipi.png' %}" class="card-img-top" alt="Sistema de seguridad">
+            <div class="card-body">
+                <h5 class="card-title">Sistema de seguridad</h5>
+                <p class="card-text">Incluye un sistema de seguridad el cual hace el control de acceso más seguro y confiable.</p>
+                <a href="#" class="btn btn-primary">Leer más</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
