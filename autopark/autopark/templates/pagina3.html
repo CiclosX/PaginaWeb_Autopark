@@ -4,85 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descarga nuestra App</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-    background-color: #f8f9fa;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
 
-.navbar-custom {
-    background-color: #007bff;
-}
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 0;
+            position: relative;
+        }
 
-.navbar-custom .nav-link {
-    color: white !important;
-}
+        .nav-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.navbar-custom .nav-link:hover {
-    text-decoration: underline;
-}
+        .logo img {
+            height: 60px;
+        }
 
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
 
+        .nav-links li {
+            margin-left: 20px;
+        }
 
-.app-icon {
-    width: 130px;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
 
-.qr-code {
-    width: 150px;
-}
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
 
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-}
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-}
+        .menu-toggle div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+            border-radius: 2px;
+        }
 
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #007bff;
+                text-align: center;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            #menu-toggle-checkbox:checked ~ .nav-links {
+                display: flex;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .column {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .app-icon {
+            width: 130px;
+        }
+
+        .qr-code {
+            width: 150px;
+        }
+
+        .btn-download {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-download:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .column {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .app-icon {
+                width: 120px;
+            }
+
+            .qr-code {
+                width: 120px;
+            }
+
+            .btn-download {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .btn-download {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="../imgs/ciclos.png" alt="Logo" height="60">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Saber más</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contáctanos</a></li>
-                </ul>
-            </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><img src="../static/cicloslogo.jpg" alt="Logo"></a>
+            <input type="checkbox" id="menu-toggle-checkbox" style="display: none;">
+            <label for="menu-toggle-checkbox" class="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Saber más</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="../templates/pagina4.html">Contáctanos</a></li>
+            </ul>
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <div class="text-center">
-            <h1 class="fw-bold">Descarga nuestra App Móvil</h1>
-        </div>
-        <div class="row justify-content-center align-items-center mt-4">
-            <div class="col-md-3 text-center">
-                <img src="../imgs/logo.png" alt="App Logo" class="img-fluid app-icon">
+    <div class="container">
+        <h1>Descarga nuestra App Móvil</h1>
+        <div class="content">
+            <div class="column">
+                <img src="../static/logo.png" alt="App Logo" class="app-icon">
             </div>
-            <div class="col-md-6 text-center">
+            <div class="column">
                 <p>Contamos con una aplicación móvil mediante la cual se podrán realizar las tareas del sistema.</p>
-                <button class="btn btn-primary">Descargar...</button>
+                <button class="btn-download">Descargar...</button>
             </div>
-            <div class="col-md-3 text-center">
-                <img src="../imgs/QR.png" alt="QR Code" class="img-fluid qr-code">
+            <div class="column">
+                <img src="../static/QR.png" alt="QR Code" class="qr-code">
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from integradora.views import home
+from autopark.views import page3, page5
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home),
+    path('page3/', page3),
+    path('page5/', page5),
 ]
