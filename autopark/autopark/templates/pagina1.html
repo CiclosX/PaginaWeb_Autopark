@@ -3,135 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Principal</title>
+  <title>AutoPark - Página Principal</title>
   <style>
-    /* Restablecer márgenes y padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    /* Estilos generales */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.5;
-    }
-    
-    /* Encabezado */
-    header {
-      background-color: #007bff;
-      color: #ffffff;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 5px solid #0056b3;
-      font-weight: bold; /* Negrita en el encabezado */
-    }
-    
-    /* Animación para el título */
-    .fade-slide {
-      animation: fadeInSlide 2s ease-out forwards;
-      color: #fcfcfc;
-    }
-    
-    @keyframes fadeInSlide {
-      0% {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    /* Barra de navegación */
-    nav {
-      background-color: #0056b3;
-      padding: 10px 0;
-      text-align: center;
-    }
-    
-    nav ul {
-      list-style-type: none;
-    }
-    
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
-    
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold; /* Negrita en los enlaces de navegación */
-    }
-    
-    /* Sección con imagen de fondo */
-    section {
-      padding: 0;
-      margin: 0;
-      background-image: url('https://i.pinimg.com/736x/63/4c/ab/634cab790d06130d30992a37ecdfaf67.jpg');
-      background-position: center;
-      background-size: cover; /* Mantiene la imagen en proporción */
-      height: 100vh; /* Ocupa toda la altura de la pantalla */
-      color: #fff; /* Texto blanco */
-      display: flex;
-      justify-content: center; /* Centra el contenido horizontalmente */
-      align-items: center; /* Centra el contenido verticalmente */
-      text-align: center; /* Centra el texto */
-      flex-direction: column; /* Apila el texto y el botón */
-      padding: 0 20px;
-      font-weight: bold; /* Negrita en toda la sección */
-    }
-    
-    section p {
-      font-size: 1.5rem; /* Aumenta el tamaño del texto */
-      margin-bottom: 20px; /* Espacio entre el texto y el botón */
-    }
-    
-    /* Estilos para el botón */
-    .btn {
-      background-color: #007bff;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 5px;
-      text-decoration: none;
-      cursor: pointer;
-      border: none;
-      font-weight: bold;
-    }
-    
-    .btn:hover {
-      background-color: #0056b3;
-    }
-    
-    /* Pie de página */
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #007bff;
-      color: #fff;
-      border-top: 5px solid #0056b3;
-      font-weight: bold; /* Negrita en el pie de página */
-    }
+    /*pagina1*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: roboto, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #0056b3;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  animation: fadeInSlide 2s ease-out forwards;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Barra de navegación */
+nav {
+  background-color: #0056b3;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+}
+
+/* Sección principal */
+.hero {
+  background-image: url('https://cdn.pixabay.com/photo/2014/08/26/13/52/underground-parking-427958_1280.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-top: 5px solid #0056b3;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
   </style>
 </head>
 <body>
   <header>
-    <h1 class="fade-slide">¡Bienvenido!</h1>
+    <h1>AutoPark</h1>
   </header>
 
-  <section>
-    <p><strong>AutoPark</strong> es un sistema de control de estacionamiento inteligente, el cual está diseñado para optimizar el estacionamiento y <strong>mejorar la experiencia de usuario</strong>.</p>
-    <button class="btn">Más información</button>
+  <nav>
+    <ul>
+        <img src="../static/Logonininin (1).svg" alt="Logo" height="60">
+        <li><a href="./pagina2.html">¿Qué es AutoPark?</a></li>
+        <li><a href="./pagina3.html">Descarga Ya!!!</a></li>
+        <li><a href="./pagina4.html">Nosotros</a></li>
+        <li><a href="./pagina5.html">Contáctanos</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h2>Bienvenido a AutoPark</h2>
+    <p>AutoPark es un sistema de control de estacionamiento inteligente, diseñado para optimizar el estacionamiento y mejorar la experiencia de usuario.</p>
+    <button class="btn" onclick="showMoreInfo()">Más información</button>
   </section>
 
   <footer>
-    <p>CiclosX</p>
+    <img src="../static/ciclos.png" alt="" width="100px" height="100px">
+    <p>&copy; 2025 CiclosX. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    function showMoreInfo() {
+      window.location.href = './ver_mas.html'; // Cambia 'mas-informacion.html' por el nombre de tu archivo
+    }
+  </script>
 </body>
 </html>
