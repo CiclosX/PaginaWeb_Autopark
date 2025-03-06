@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <style>
+    /* Restablecer márgenes y padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.5;
+    }
+    
+    /* Encabezado */
+    header {
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #0056b3;
+      font-weight: bold; /* Negrita en el encabezado */
+    }
+    
+    /* Animación para el título */
+    .fade-slide {
+      animation: fadeInSlide 2s ease-out forwards;
+      color: #fcfcfc;
+    }
+    
+    @keyframes fadeInSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Barra de navegación */
+    nav {
+      background-color: #0056b3;
+      padding: 10px 0;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold; /* Negrita en los enlaces de navegación */
+    }
+    
+    /* Sección con imagen de fondo */
+    section {
+      padding: 0;
+      margin: 0;
+      background-image: url('https://i.pinimg.com/736x/63/4c/ab/634cab790d06130d30992a37ecdfaf67.jpg');
+      background-position: center;
+      background-size: cover; /* Mantiene la imagen en proporción */
+      height: 100vh; /* Ocupa toda la altura de la pantalla */
+      color: #fff; /* Texto blanco */
+      display: flex;
+      justify-content: center; /* Centra el contenido horizontalmente */
+      align-items: center; /* Centra el contenido verticalmente */
+      text-align: center; /* Centra el texto */
+      flex-direction: column; /* Apila el texto y el botón */
+      padding: 0 20px;
+      font-weight: bold; /* Negrita en toda la sección */
+    }
+    
+    section p {
+      font-size: 1.5rem; /* Aumenta el tamaño del texto */
+      margin-bottom: 20px; /* Espacio entre el texto y el botón */
+    }
+    
+    /* Estilos para el botón */
+    .btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      font-weight: bold;
+    }
+    
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    
+    /* Pie de página */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border-top: 5px solid #0056b3;
+      font-weight: bold; /* Negrita en el pie de página */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="fade-slide">¡Bienvenido!</h1>
+  </header>
+
+  <section>
+    <p><strong>AutoPark</strong> es un sistema de control de estacionamiento inteligente, el cual está diseñado para optimizar el estacionamiento y <strong>mejorar la experiencia de usuario</strong>.</p>
+    <button class="btn">Más información</button>
+  </section>
+
+  <footer>
+    <p>CiclosX</p>
+  </footer>
+</body>
+</html>
