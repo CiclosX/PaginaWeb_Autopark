@@ -154,33 +154,35 @@
 
     <!-- Cards Section -->
     <div class="card-container">
-        <!-- Card 1 -->
-        <div class="card">
-            <img src="../static/tiemporeal.png" class="card-img-top" alt="Actualización en tiempo real">
-            <div class="card-body">
-                <h5 class="card-title">Actualización en tiempo real</h5>
-                <p class="card-text">Este sistema cuenta con actualizaciones en tiempo real de los espacios disponibles.</p>
-                <a href="#" class="btn btn-primary">Leer más</a>
-            </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="card">
-            <img src="../static/app1.png" class="card-img-top" alt="Realizar una reserva">
-            <div class="card-body">
-                <h5 class="card-title">Realizar una reserva</h5>
-                <p class="card-text">Cuenta con el sistema de reserva de lugares mediante la App Móvil.</p>
-                <a href="#" class="btn btn-primary">Leer más</a>
-            </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="card">
-            <img src="../static/alarmaapp.png" class="card-img-top" alt="Sistema de seguridad">
-            <div class="card-body">
-                <h5 class="card-title">Sistema de seguridad</h5>
-                <p class="card-text">Incluye un sistema de seguridad que hace el control de acceso más seguro y confiable.</p>
-                <a href="#" class="btn btn-primary">Leer más</a>
-            </div>
-        </div>
+<!-- Card 1 -->
+<div class="card">
+    <img src="../static/tiemporeal.png" class="card-img-top" alt="Actualización en tiempo real">
+    <div class="card-body">
+        <h5 class="card-title">Actualización en tiempo real</h5>
+        <p class="card-text">Este sistema cuenta con actualizaciones en tiempo real de los espacios disponibles.</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Leer más</button>
+    </div>
+</div>
+
+<!-- Card 2 -->
+<div class="card">
+    <img src="../static/app1.png" class="card-img-top" alt="Realizar una reserva">
+    <div class="card-body">
+        <h5 class="card-title">Realizar una reserva</h5>
+        <p class="card-text">Cuenta con el sistema de reserva de lugares mediante la App Móvil.</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Leer más</button>
+    </div>
+</div>
+
+<!-- Card 3 -->
+<div class="card">
+    <img src="../static/alarmaapp.png" class="card-img-top" alt="Sistema de seguridad">
+    <div class="card-body">
+        <h5 class="card-title">Sistema de seguridad</h5>
+        <p class="card-text">Incluye un sistema de seguridad que hace el control de acceso más seguro y confiable.</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">Leer más</button>
+    </div>
+</div>
     </div>
 
     <!-- Hero Section -->
@@ -198,5 +200,62 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Modal 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal1Label">Actualización en tiempo real</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Este sistema cuenta con actualizaciones en tiempo real de los espacios disponibles. Esto significa que siempre tendrás información precisa sobre la disponibilidad de estacionamiento.</p>
+                <p>Además, se integra con sensores y cámaras para garantizar que los datos sean exactos y confiables.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal2Label">Realizar una reserva</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Cuenta con el sistema de reserva de lugares mediante la App Móvil. Puedes reservar un espacio de estacionamiento desde cualquier lugar y en cualquier momento.</p>
+                <p>La app te notificará cuando tu reserva esté lista y te guiará hasta el lugar asignado.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal3Label">Sistema de seguridad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Incluye un sistema de seguridad que hace el control de acceso más seguro y confiable. Utiliza tecnología avanzada para garantizar que solo los usuarios autorizados puedan ingresar.</p>
+                <p>Además, cuenta con un sistema de monitoreo en tiempo real para prevenir incidentes.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
