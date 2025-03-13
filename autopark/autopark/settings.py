@@ -16,6 +16,17 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+STATIC_URL = '/static/'
+
+# Si estás en desarrollo, puedes configurar estáticos adicionales aquí:
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # Asegúrate de que tus archivos estáticos estén en esta carpeta
+]
+
+# Si quieres que los archivos estáticos sean servidos correctamente en producción:
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Para uso en producción (para hacer `collectstatic`)
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -37,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'autoparki',
+    'autopark',
 ]
 
 MIDDLEWARE = [
@@ -52,10 +63,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'autopark.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,6 +76,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {'static': 'django.templatetags.static'},
         },
     },
 ]
@@ -104,7 +117,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+
+LANGUAGE_CODE = 'es-es'  # Asegúrate de que esté en español para que los caracteres especiales se manejen correctamente
+USE_I18N = True
+USE_TZ = True
 
 TIME_ZONE = 'UTC'
 
@@ -129,4 +145,4 @@ EMAIL_HOST = 'smtp.gmail.com'  # Servidor SMTP de Gmail
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'xciclos@gmail.com'  # Reemplázalo con tu correo
-EMAIL_HOST_PASSWORD = 'Mapachespeludos_69'  # Usa una variable de entorno para mayor seguridad
+EMAIL_HOST_PASSWORD = 'mapachespeludos_69'  # Usa una variable de entorno para mayor seguridad
