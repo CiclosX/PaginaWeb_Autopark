@@ -5,207 +5,290 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descarga nuestra App</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            text-align: center;
-        }
-
-        .navbar {
-            background-color: #007bff;
-            padding: 15px 0;
-            position: relative;
-        }
-
-        .nav-container {
-            width: 90%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 60px;
-        }
-
-        .nav-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .menu-toggle div {
-            width: 30px;
-            height: 4px;
-            background-color: white;
-            margin: 5px 0;
-            border-radius: 2px;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #007bff;
-                text-align: center;
-            }
-
-            .nav-links li {
-                margin: 10px 0;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-
-            #menu-toggle-checkbox:checked ~ .nav-links {
-                display: flex;
-            }
-
-            .logo img {
-                height: 50px;
-            }
-        }
-
-        .container {
-            width: 80%;
-            margin: 40px auto;
-        }
-
-        h1 {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .column {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .app-icon {
-            width: 130px;
-        }
-
-        .qr-code {
-            width: 150px;
-        }
-
-        .btn-download {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn-download:hover {
-            background-color: #0056b3;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            .content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .column {
-                width: 100%;
-                padding: 10px;
-            }
-
-            .app-icon {
-                width: 120px;
-            }
-
-            .qr-code {
-                width: 120px;
-            }
-
-            .btn-download {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                width: 95%;
-            }
-
-            h1 {
-                font-size: 20px;
-            }
-
-            .btn-download {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
-        }
+          /* Estilos generales */
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  }
+  
+  /* Barra de navegación */
+  .navbar {
+      background-color: #007bff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-container {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .logo img {
+      height: 60px;
+      transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+      transform: scale(1.1);
+  }
+  
+  .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+  }
+  
+  .nav-links li {
+      margin-left: 20px;
+  }
+  
+  .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+      color: #ffdd57;
+  }
+  
+  .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+  }
+  
+  .menu-toggle div {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+      .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #007bff;
+          text-align: center;
+      }
+  
+      .nav-links li {
+          margin: 10px 0;
+      }
+  
+      .menu-toggle {
+          display: flex;
+      }
+  
+      #menu-toggle-checkbox:checked ~ .nav-links {
+          display: flex;
+      }
+  
+      .logo img {
+          height: 50px;
+      }
+  }
+  
+  /* Contenedor principal */
+  .container {
+      width: 90%;
+      margin: auto;
+      flex: 1; /* Ocupa el espacio restante */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+  h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+  }
+  
+  .content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 20px;
+  }
+  
+  .column {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      min-width: 250px;
+      max-width: 300px;
+      transition: transform 0.3s ease;
+  }
+  
+  .column:hover {
+      transform: translateY(-10px);
+  }
+  
+  .app-icon {
+      width: 130px;
+      animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+      0%, 100% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-10px);
+      }
+  }
+  
+  .qr-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+  
+  .qr-code {
+      width: 150px;
+      transition: transform 0.3s ease;
+  }
+  
+  .qr-code:hover {
+      transform: scale(1.1);
+  }
+  
+  .qr-text {
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+  }
+  
+  .btn-download {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-download:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+      .container {
+          width: 95%;
+      }
+  
+      h1 {
+          font-size: 24px;
+      }
+  
+      .content {
+          flex-direction: column;
+          gap: 20px;
+      }
+  
+      .column {
+          width: 100%;
+          padding: 10px;
+      }
+  
+      .app-icon {
+          width: 120px;
+      }
+  
+      .qr-code {
+          width: 120px;
+      }
+  
+      .btn-download {
+          font-size: 14px;
+          padding: 8px 16px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .container {
+          width: 100%;
+      }
+  
+      h1 {
+          font-size: 20px;
+      }
+  
+      .btn-download {
+          font-size: 14px;
+          padding: 8px 16px;
+      }
+  }
+  footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+  }
+  
+  footer p {
+      margin: 0;
+      font-weight: bold;
+  }
     </style>
 </head>
 <body>
-
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo"><img src="../static/cicloslogo.jpg" alt="Logo"></a>
-            <input type="checkbox" id="menu-toggle-checkbox" style="display: none;">
-            <label for="menu-toggle-checkbox" class="menu-toggle">
+            <a class="navbar-brand" href="#">
+                <img src="../static/Logonininin (1).svg" alt="Logo" height="60">
+            </a>
                 <div></div>
                 <div></div>
                 <div></div>
             </label>
             <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Saber más</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="../templates/pagina5.html">Contáctanos</a></li>
+                <li><a href="{% url 'pagina1' %}">Inicio</a></li>
+                <li><a href="{% url 'pagina2' %}">Saber más</a></li>
+                <li><a href="{% url 'pagina4' %}">Nosotros</a></li>
+                <li><a href="{% url 'pagina5' %}">Contáctanos</a></li>
             </ul>
         </div>
     </nav>
@@ -214,17 +297,42 @@
         <h1>Descarga nuestra App Móvil</h1>
         <div class="content">
             <div class="column">
-                <img src="../static/logo.png" alt="App Logo" class="app-icon">
+                <img src="../static/mobilapp.png" alt="App Logo" class="app-icon">
             </div>
             <div class="column">
                 <p>Contamos con una aplicación móvil mediante la cual se podrán realizar las tareas del sistema.</p>
                 <button class="btn-download">Descargar...</button>
             </div>
             <div class="column">
-                <img src="../static/QR.png" alt="QR Code" class="qr-code">
+                <div class="qr-container">
+                    <img src="../static/QR.png" alt="QR Code" class="qr-code">
+                    <div class="qr-text">Descarga mi app por aquí también!</div>
+                </div>
             </div>
         </div>
     </div>
 
+    <script>
+        // Animación para el botón de descarga
+        document.querySelector('.btn-download').addEventListener('click', function() {
+            alert('Descargando la aplicación...');
+            // O redirigir a la página de descarga
+            // window.location.href = 'download.html';
+        });
+
+        // Efecto de hover en las columnas
+        document.querySelectorAll('.column').forEach(column => {
+            column.addEventListener('mouseenter', () => {
+                column.style.transform = 'translateY(-10px)';
+            });
+            column.addEventListener('mouseleave', () => {
+                column.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+        <footer>
+            <img src="../static/ciclos.png" alt="" width="100px" height="100px">
+            <p>CiclosX &copy; 2025. Todos los derechos reservados.</p>
+        </footer>
 </body>
 </html>
