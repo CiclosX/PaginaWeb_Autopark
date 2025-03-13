@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AutoPark - Página Principal</title>
+  {% load static %}
   <style>
     /*pagina1*/
 * {
@@ -155,7 +156,7 @@ footer p {
 
   <nav>
     <ul>
-        <img src="../static/Logonininin (1).svg" alt="Logo" height="60">
+        <img src="{% static 'Logonininin (1).svg' %}" alt="Logo" height="60">
         <li><a href="{% url 'pagina2' %}">¿Qué es AutoPark?</a></li>
         <li><a href="{% url 'pagina3' %}">Descarga ya!!!</a></li>
         <li><a href="{% url 'pagina4' %}">Nosotros</a></li>
@@ -170,7 +171,7 @@ footer p {
   </section>
 
   <footer>
-    <img src="../static/ciclos.png" alt="" width="100px" height="100px">
+    <img src="{% static 'ciclos.png' %}" alt="Logo Ciclos" width="100px" height="100px">
     <p>&copy; 2025 CiclosX. Todos los derechos reservados.</p>
   </footer>
 

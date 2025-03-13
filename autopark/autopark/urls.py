@@ -13,3 +13,4 @@ urlpatterns = [
     path('pagina6/', pagina6, name='pagina6'),
     path('contacto/', contact_view, name='contacto'),
 ]
+
