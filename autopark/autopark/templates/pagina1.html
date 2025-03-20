@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AutoPark - Página Principal</title>
   {% load static %}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /*pagina1*/
 * {
@@ -15,7 +16,7 @@
 
 /* Estilos generales */
 body {
-  font-family: roboto, sans-serif;
+  font-family: 'Poppins', 'Roboto', sans-serif;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
@@ -147,6 +148,10 @@ footer p {
     margin: 10px 0;
   }
 }
+footer a {
+  color: #d4d4d4;
+  margin: 0 10px;
+}
   </style>
 </head>
 <body>
@@ -173,6 +178,10 @@ footer p {
   <footer>
     <img src="{% static 'ciclos.png' %}" alt="Logo Ciclos" width="100px" height="100px">
     <p>&copy; 2025 CiclosX. Todos los derechos reservados.</p>
+    <p>
+      <a href="https://url-de-la-documentacion-1.com" target="_blank">Manual de usuario</a><br>
+      <a href="https://drive.google.com/file/d/1zGTb61f_ot9t3wZR9IHCoCbz7od3xBUh/view?usp=sharing" target="_blank">Terminos y condiciones</a>
+  </p>
   </footer>
 
   <script>

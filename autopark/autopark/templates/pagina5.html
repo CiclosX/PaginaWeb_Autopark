@@ -4,263 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-          body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #d1d3d4;
-  }
-  
-  .navbar {
-      background-color: #007bff;
-      padding: 15px 0;
-      position: relative;
-  }
-  
-  .nav-container {
-      width: 90%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  
-  .logo img {
-      height: 40px;
-  }
-  
-  .nav-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-  }
-  
-  .nav-links li {
-      margin-left: 20px;
-  }
-  
-  .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-  }
-  
-  .nav-links a.active {
-      text-decoration: underline;
-  }
-  
-  .menu-icon {
-      display: none;
-      cursor: pointer;
-  }
-  
-  .menu-icon span {
-      background-color: white;
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px 0;
-      transition: 0.4s;
-  }
-  
-  .contact-container {
-      width: 50%;
-      background-color: white;
-      padding: 40px;
-      margin: 40px auto;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-  }
-  
-  .contact-container h1 {
-      font-weight: bold;
-  }
-  
-  .contact-container p {
-      color: #333;
-  }
-  
-  .contact-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  
-  .contact-form label {
-      width: 100%;
-      text-align: left;
-      font-weight: bold;
-      margin: 10px 0 5px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-  }
-  
-  .contact-form textarea {
-      resize: none;
-  }
-  
-  .contact-form button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: white;
-      color: #007bff;
-      border: 2px solid #007bff;
-      border-radius: 5px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-  }
-  
-  .contact-form button:hover {
-      background-color: #007bff;
-      color: white;
-  }
-  
-  .contact-form .icon {
-      margin-right: 5px;
-  }
-  
-  .footer {
-      background-color: #007bff;
-      color: white;
-      padding: 20px 0;
-      margin-top: 40px;
-  }
-  
-  .footer-container {
-      display: flex;
-      justify-content: space-around;
-      width: 90%;
-      margin: 0 auto;
-  }
-  
-  .footer-section {
-      text-align: center;
-  }
-  
-  .footer-section h5 {
-      margin-bottom: 10px;
-  }
-  
-  .footer-section ul {
-      list-style: none;
-      padding: 0;
-  }
-  
-  .footer-section ul li {
-      margin: 5px 0;
-  }
-  
-  .footer-section ul li a {
-      text-decoration: none;
-      color: white;
-  }
-  
-  .footer-logo {
-      width: 120px;
-  }
-  
-  @media (max-width: 768px) {
-      .contact-container {
-          width: 80%;
-          padding: 30px;
-      }
-  
-      .navbar {
-          padding: 10px 0;
-      }
-  
-      .logo img {
-          height: 35px;
-      }
-  
-      .nav-links {
-          display: none;
-          width: 100%;
-          flex-direction: column;
-          align-items: center;
-          margin-top: 20px;
-      }
-  
-      .nav-links li {
-          margin-left: 0;
-          margin-bottom: 10px;
-      }
-  
-      .nav-links.active {
-          display: flex;
-      }
-  
-      .contact-container h1 {
-          font-size: 24px;
-      }
-  
-      .contact-form button {
-          font-size: 14px;
-          padding: 8px 16px;
-      }
-  
-      .footer-container {
-          flex-direction: column;
-          align-items: center;
-      }
-  
-      .footer-section {
-          margin-bottom: 20px;
-      }
-  
-      .footer-logo {
-          width: 100px;
-      }
-  
-      .menu-icon {
-          display: block;
-      }
-  }
-  
-  @media (max-width: 480px) {
-      .contact-container {
-          width: 90%;
-          padding: 20px;
-      }
-  
-      .navbar {
-          padding: 8px 0;
-      }
-  
-      .logo img {
-          height: 30px;
-      }
-  
-      .contact-container h1 {
-          font-size: 20px;
-      }
-  
-      .footer-container {
-          flex-direction: column;
-          align-items: center;
-      }
-  
-      .footer-logo {
-          width: 80px;
-      }
-  
-      .contact-form button {
-          font-size: 12px;
-          padding: 6px 12px;
-      }
-  }
+        body {
+            font-family: 'Poppins', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d1d3d4;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 0;
+            position: relative;
+        }
+
+        .nav-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-links a.active {
+            text-decoration: underline;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-icon span {
+            background-color: white;
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        .contact-container {
+            width: 50%;
+            background-color: white;
+            padding: 40px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-container h1 {
+            font-weight: bold;
+        }
+
+        .contact-container p {
+            color: #333;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form label {
+            width: 100%;
+            text-align: left;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            font-family: 'Poppins', 'Roboto', sans-serif;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Poppins', 'Roboto', sans-serif;
+        }
+
+        .contact-form textarea {
+            resize: none;
+        }
+
+        .contact-form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: white;
+            color: #007bff;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-family: 'Poppins', 'Roboto', sans-serif;
+        }
+
+        .contact-form button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .contact-form .icon {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                width: 80%;
+                padding: 30px;
+            }
+
+            .navbar {
+                padding: 10px 0;
+            }
+
+            .logo img {
+                height: 35px;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            .nav-links li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .contact-container h1 {
+                font-size: 24px;
+            }
+
+            .contact-form button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .navbar {
+                padding: 8px 0;
+            }
+
+            .logo img {
+                height: 30px;
+            }
+
+            .contact-container h1 {
+                font-size: 20px;
+            }
+
+            .contact-form button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        footer a {
+            color: #d4d4d4;
+            margin: 0 10px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
@@ -307,41 +275,17 @@
         {% endif %}
         
     </div>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <img src="../static/ciclos.png" alt="" width="100px" height="100px">
-            </div>
-            <div class="footer-section">
-                <h5>Product</h5>
-                <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h5>Resources</h5>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">User guides</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h5>Company</h5>
-                <ul>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('active');
         }
     </script>
-
+    <footer>
+        <img src="../static/ciclos.png" alt="" width="100px" height="100px">
+        <p>CiclosX &copy; 2025. Todos los derechos reservados.</p>
+        <a href="https://url-de-la-documentacion-1.com" target="_blank">Manual de usuario</a><br>
+        <a href="https://drive.google.com/file/d/1zGTb61f_ot9t3wZR9IHCoCbz7od3xBUh/view?usp=sharing" target="_blank">Terminos y condiciones</a>
+    </footer>
 </body>
 </html>
